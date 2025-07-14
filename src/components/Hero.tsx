@@ -1,5 +1,6 @@
 import React from 'react';
 import { Clock, Users, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Users className="h-5 w-5 text-primary-500" />
-                <span className="text-gray-300">Andre: 1000-2000kr/t</span>
+                <span className="text-gray-300">Markedspris: 1000-2000kr/t</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Heart className="h-5 w-5 text-primary-500" />
@@ -33,23 +34,24 @@ const Hero: React.FC = () => {
             </div>
             
             <div className="flex space-x-4">
-              <button className="btn-primary">
+              <Link to="/contact" className="btn-primary">
                 Kontakt
-              </button>
-              <button className="btn-secondary">
+              </Link>
+              <Link to="/portfolio" className="btn-secondary">
                 Portefølje
-              </button>
+              </Link>
             </div>
           </div>
           
-          <div className="relative">
-            <div className="bg-white rounded-2xl p-6 shadow-2xl">
-              <img 
-                src="\src\media\erik_kvadrat.jpg" 
-                alt="IT-ekspert" 
-                className="w-full h-auto rounded-lg object-cover"
-              />
-            </div>
+          <div className="relative aspect-square">
+            <img 
+              src="/src/media/erik_kvadrat.jpg" 
+              alt="IT-ekspert Erik Fjeldheim fra Fjelldata"
+              loading="lazy"
+              width={600}
+              height={600}
+              className="w-full h-full rounded-lg object-cover"
+            />
           </div>
         </div>
       </div>
