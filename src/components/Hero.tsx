@@ -45,11 +45,11 @@ const Hero: React.FC = () => {
           
           <div className="relative aspect-square">
             <img 
-              src="/src/media/erik_kvadrat.jpg" 
+              src="/assets/images/erik_kvadrat.jpg" 
               alt="IT-ekspert Erik Fjeldheim fra Fjelldata"
               loading="lazy"
-              width={600}
-              height={600}
+              width={500}
+              height={500}
               className="w-full h-full rounded-lg object-cover"
             />
           </div>
