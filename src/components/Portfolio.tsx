@@ -6,7 +6,7 @@ const Portfolio: React.FC = () => {
     {
       title: 'Fjelldata',
       description: 'Min personlige porteføljeside bygget med moderne web-teknologier. Fokus på ytelse, tilgjengelighet og brukervennlighet.',
-      url: 'https://fjelldata.com/',
+      url: 'https://github.com/ErFjeldheim/fjelldata',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Responsivt Design']
     },
     {
