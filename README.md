@@ -75,4 +75,3 @@ The website is automatically deployed to fjelldata.com through a GitHub Actions 
 - Contact form
 - Custom animations and transitions
 - SEO optimization with meta tags
-```
