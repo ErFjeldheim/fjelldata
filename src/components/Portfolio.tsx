@@ -50,7 +50,7 @@ const Portfolio: React.FC = () => {
             <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
               <div className="aspect-video w-full relative">
                 <img
-                  src={`/screenshots/${project.url.replace('https://', '').replace('/', '')}.png`}
+                  src={`/screenshots/${project.url.includes('github.com') ? 'fjelldata.com' : project.url.replace('https://', '').replace('/', '')}.png`}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
