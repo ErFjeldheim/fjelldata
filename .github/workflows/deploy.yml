@@ -36,7 +36,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           source: "dist/*"
-          target: "/var/www/fjelldata/dist/"
+          target: "/var/www/fjelldata/"
 
       - name: 🔄 Restart Apache via SSH
         uses: appleboy/ssh-action@v0.1.8
