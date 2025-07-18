@@ -18,6 +18,16 @@ jobs:
       - name: 🔨 Build project
         run: npm run build
 
+      - name: 🧹 Clean old build on server
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            rm -rf /var/www/fjelldata/dist/*
+
       - name: 🚀 Copy files via SCP
         uses: appleboy/scp-action@v0.1.4
         with:
@@ -26,7 +36,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           source: "dist/*"
-          target: "/var/www/fjelldata/dist"
+          target: "/var/www/fjelldata/dist/"
 
       - name: 🔄 Restart Apache via SSH
         uses: appleboy/ssh-action@v0.1.8
