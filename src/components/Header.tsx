@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             <Link to="/portfolio" className="hover:text-gray-300 transition-colors">Portefølje</Link>
           </div>
           <Link to="/contact" className="btn-primary">
-            Ta kontakt
+            TEST
           </Link>
         </div>
 
