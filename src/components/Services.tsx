@@ -26,8 +26,8 @@ const Services: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">IT-tjenester for din bedrift</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Profesjonell IT-kompetanse til konkurransedyktige priser. Med solid utdanning og praktisk erfaring 
-            leverer jeg robuste løsninger for din bedrift.
+            Profesjonell IT-kompetanse til konkurransedyktige priser. Med relevant utdanning og praktisk erfaring 
+            leverer jeg robuste løsninger.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ const Services: React.FC = () => {
             <div className="flex items-start space-x-4">
               <GraduationCap className="w-6 h-6 text-primary-500 mt-1" />
               <div>
-                <h3 className="font-semibold mb-2">Solid utdanning</h3>
+                <h3 className="font-semibold mb-2">Utdanning</h3>
                 <p className="text-gray-300">Bachelor i Informatikk ved NTNU (pågående)</p>
               </div>
             </div>

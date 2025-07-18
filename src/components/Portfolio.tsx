@@ -11,25 +11,25 @@ const Portfolio: React.FC = () => {
     },
     {
       title: 'Skjold Arena',
-      description: 'Moderne nettside for Skjold Arena - idrettsanlegg og treningssenter. Utviklet med WordPress på LAMP-plattform.',
+      description: 'Moderne nettside for Skjold Arena - bygdehuset i Skjold. Utviklet med WordPress i en LAMP stack',
       url: 'https://skjoldarena.no/',
       technologies: ['WordPress', 'Tilpasset Design', 'LAMP Stack', 'Responsivt Design']
     },
     {
       title: 'Tante Ulrika',
-      description: 'Skreddersydd nettbutikk og presentasjonsside for Tante Ulrika. Bygget på WordPress med WooCommerce.',
+      description: 'Skreddersydd presentasjonsside for Tante Ulrika. Bygget med WordPress og WooCommerce.',
       url: 'https://tanteulrika.no/',
       technologies: ['WordPress', 'Elementor', 'Tilpasset Theme']
     },
     {
       title: 'Lensmannsgarden Isvik',
-      description: 'Informativ presentasjonsside for historiske Lensmannsgarden i Isvik. WordPress-løsning med fokus på brukeropplevelse.',
+      description: 'Informativ bookingside for historiske Lensmannsgarden i Isvik. WordPress-løsning med fokus på brukeropplevelse.',
       url: 'https://lensmannsgarden-isvik.no/',
       technologies: ['WordPress', 'Online Booking', 'Responsivt Design', 'SEO']
     },
     {
       title: 'Matland Gard',
-      description: 'Moderne presentasjonsside for Matland Gard. Utviklet i WordPress med fokus på ytelse og søkemotoroptimalisering.',
+      description: 'Moderne bookingside for Matland Gard. Utviklet i WordPress med fokus på ytelse og søkemotoroptimalisering.',
       url: 'https://matlandgard.no/',
       technologies: ['WordPress', 'Tilpasset Theme', 'Responsivt Design', 'SEO']
     },
