@@ -1,0 +1,11 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://fjelldata.com/sitemap.xml
+
+# Blokkér eventuelle utviklingsversjoner
+Disallow: /dev/
+Disallow: /_next/
+Disallow: /api/
+            
