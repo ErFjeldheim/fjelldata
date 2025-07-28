@@ -1,3 +1,4 @@
+/* @tailwind is used by Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,6 +16,42 @@
   
   .btn-secondary {
     @apply bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+
+  .hero-image.clicked {
+    animation: slide-out-in 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+  
+  @keyframes slide-out-in {
+    0% {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(150%) rotate(10deg);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(150%) rotate(10deg);
+      opacity: 0;
+    }
+    55% {
+      transform: translateX(-20%) rotate(-5deg);
+      opacity: 0.7;
+    }
+    70% {
+      transform: translateX(10%) rotate(2deg);
+      opacity: 0.8;
+    }
+    85% {
+      transform: translateX(-5%) rotate(-1deg);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
   }
   
   .feature-card {

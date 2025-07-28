@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Clock, Users, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const [currentImage, setCurrentImage] = useState('/erik_kvadrat.jpg');
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleImageClick = () => {
+    if (isAnimating) return;
+    
+    setIsAnimating(true);
+    const img = document.querySelector('.hero-image');
+    img?.classList.add('clicked');
+    
+    // Bytt bilde når det er ute av syne (etter 40% av animasjonen)
+    setTimeout(() => {
+      setCurrentImage(current => 
+        current === '/erik_kvadrat.jpg' ? '/erik_kvadrat_2.jpg' : '/erik_kvadrat.jpg'
+      );
+    }, 600); // 40% av 1.5s = 600ms
+
+    // Reset animasjon og state
+    setTimeout(() => {
+      img?.classList.remove('clicked');
+      setIsAnimating(false);
+    }, 1500);
+  };
+
   return (
     <section className="bg-black text-white py-20">
       <div className="container mx-auto px-4">
@@ -43,14 +67,15 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="relative aspect-square">
+          <div className="relative aspect-square group cursor-pointer overflow-hidden" onClick={handleImageClick}>
+            <div className="absolute inset-0 bg-primary-500 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
             <img 
-              src="/erik_kvadrat.jpg" 
+              src={currentImage}
               alt="IT-ekspert Erik Fjeldheim fra Fjelldata"
               loading="lazy"
               width={500}
               height={500}
-              className="w-full h-full rounded-lg object-cover"
+              className="hero-image w-full h-full rounded-lg object-cover transform transition-transform duration-300 group-hover:scale-[1.02] shadow-xl"
             />
           </div>
         </div>
