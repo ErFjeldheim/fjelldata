@@ -68,14 +68,14 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="relative aspect-square group cursor-pointer overflow-hidden" onClick={handleImageClick}>
-            <div className="absolute inset-0 bg-primary-500 rounded-lg opacity-0 transition-opacity duration-300 @media(hover: hover) { group-hover:opacity-10 }"></div>
+            <div className="absolute inset-0 bg-primary-500 rounded-lg opacity-0 transition-opacity duration-300 md:group-hover:opacity-10"></div>
             <img 
               src={currentImage}
               alt="IT-ekspert Erik Fjeldheim fra Fjelldata"
               loading="lazy"
               width={500}
               height={500}
-              className="hero-image w-full h-full rounded-lg object-cover transform transition-transform duration-300 shadow-xl @media(hover: hover) { group-hover:scale-[1.02] }"
+              className="hero-image w-full h-full rounded-lg object-cover transform transition-transform duration-300 shadow-xl md:group-hover:scale-[1.02]"
             />
           </div>
         </div>
