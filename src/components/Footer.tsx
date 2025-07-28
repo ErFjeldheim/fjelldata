@@ -1,6 +1,7 @@
 import React from 'react';
-import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -24,13 +25,13 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="https://goo.gl/maps/your-location" 
+                  href="https://maps.app.goo.gl/4uirXnX2YTa4AMrz8"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center text-gray-600 hover:text-primary-500 transition-colors"
                 >
                   <MapPin className="h-5 w-5 mr-2" />
-                  Haugesund, Norge
+                  Vindafjord, Norge
                 </a>
               </li>
             </ul>
@@ -64,16 +65,16 @@ const Footer: React.FC = () => {
                 className="text-gray-600 hover:text-primary-500 transition-colors"
                 aria-label="GitHub"
               >
-                <Github className="h-6 w-6" />
+                <FaGithub className="h-6 w-6" />
               </a>
               <a 
-                href="https://linkedin.com/in/your-profile" 
+                href="https://www.linkedin.com/in/fjeldheim/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary-500 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-6 w-6" />
+                <FaLinkedin className="h-6 w-6" />
               </a>
             </div>
           </div>
