@@ -7,10 +7,16 @@ This repository contains the source code for [fjelldata.com](https://fjelldata.c
 - **Frontend Framework**: React 19
 - **Language**: TypeScript
 - **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Maps**: Leaflet/React Leaflet
-- **UI Components**: Headless UI, Lucide React icons
+- **Styling**: 
+  - Tailwind CSS for utility-first styling
+  - Custom animations with CSS keyframes
+  - Responsive design patterns
+- **UI Components**: 
+  - Headless UI for accessible dialogs
+  - Lucide React icons for consistent iconography
+  - Custom interactive components
 - **Routing**: React Router
+- **Maps**: Leaflet/React Leaflet
 
 ## Development
 
@@ -57,21 +63,41 @@ The website is automatically deployed to fjelldata.com through a GitHub Actions 
 
 ```
 ├── public/          # Static assets
+│   ├── screenshots/  # Project portfolio images
+│   └── *.jpg        # Profile and other images
 ├── src/
-│   ├── assets/     # Project assets
-│   ├── components/ # React components
-│   ├── hooks/      # Custom React hooks
-│   ├── media/      # Media files
-│   └── App.tsx     # Root component
-├── vite.config.ts  # Vite configuration
+│   ├── assets/      # Project assets
+│   ├── components/  # React components
+│   │   ├── Hero.tsx       # Hero section with animations
+│   │   ├── Features.tsx   # Features with dialogs
+│   │   ├── Portfolio.tsx  # Project showcase
+│   │   └── ...           # Other components
+│   ├── hooks/       # Custom React hooks
+│   │   └── useTypewriter.ts  # Typewriter animation
+│   ├── types/       # TypeScript definitions
+│   └── App.tsx      # Root component
+├── .vscode/         # Editor configuration
+├── vite.config.ts   # Vite configuration
 └── tailwind.config.js
 ```
 
 ## Portfolio Features
 
-- Responsive design
+- Responsive design optimized for all devices
 - Interactive map integration
 - Project showcase with screenshots
-- Contact form
-- Custom animations and transitions
+- Contact form integration
 - SEO optimization with meta tags
+- Advanced animations and interactions:
+  - Interactive hero section with image transitions
+  - Smart hover effects (desktop only)
+  - Smooth image swap animations
+  - Responsive click animations
+- Price comparison features:
+  - Real-time market rate comparisons
+  - Interactive pricing dialogs
+  - Transparent cost breakdowns
+- Expertise showcase:
+  - Scalable service offerings
+  - Personal consultation information
+  - Service level descriptions
