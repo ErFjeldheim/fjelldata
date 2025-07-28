@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
               </>
             } />
           </Routes>
+          <Footer />
         </div>
       </ErrorBoundary>
     </Router>
