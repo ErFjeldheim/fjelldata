@@ -18,6 +18,34 @@
     @apply bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
   }
 
+  /* Global side padding - 5em på venstre og 5em på høyre side */
+  .container {
+    padding-left: 5em !important;
+    padding-right: 5em !important;
+  }
+
+  /* Responsiv tilpasning for mindre skjermer */
+  @media (max-width: 1024px) {
+    .container {
+      padding-left: 3em !important;
+      padding-right: 3em !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 2em !important;
+      padding-right: 2em !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
+    }
+  }
+
   .hero-image.clicked {
     animation: slide-out-in 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
