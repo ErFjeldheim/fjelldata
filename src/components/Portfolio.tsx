@@ -17,19 +17,19 @@ const Portfolio: React.FC = () => {
     },
     {
       title: 'Tante Ulrika',
-      description: 'Skreddersydd presentasjonsside for Tante Ulrika. Bygget med WordPress og WooCommerce.',
+      description: 'Skreddersydd presentasjonsside for Tante Ulrika. Bygget med WordPress og Elementor',
       url: 'https://tanteulrika.no/',
       technologies: ['WordPress', 'Elementor', 'Tilpasset Theme']
     },
     {
       title: 'Lensmannsgarden Isvik',
-      description: 'Informativ bookingside for historiske Lensmannsgarden i Isvik. WordPress-løsning med fokus på brukeropplevelse.',
+      description: 'Informativ bookingside for historiske Lensmannsgarden i Isvik.',
       url: 'https://lensmannsgarden-isvik.no/',
       technologies: ['WordPress', 'Online Booking', 'Responsivt Design', 'SEO']
     },
     {
       title: 'Matland Gard',
-      description: 'Moderne bookingside for Matland Gard. Utviklet i WordPress med fokus på ytelse og søkemotoroptimalisering.',
+      description: 'Moderne bookingside for Matland Gard. Utviklet i WordPress og Elementor',
       url: 'https://matlandgard.no/',
       technologies: ['WordPress', 'Tilpasset Theme', 'Responsivt Design', 'SEO']
     },
