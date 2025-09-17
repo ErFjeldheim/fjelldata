@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="bg-black text-white py-20">
+    <section className="bg-black text-white pt-4 pb-20">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
