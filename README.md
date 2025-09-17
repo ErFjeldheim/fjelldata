@@ -69,6 +69,8 @@ The website is automatically deployed to fjelldata.com through a GitHub Actions 
 ├── public/          # Static assets
 │   ├── screenshots/  # Project portfolio images
 │   ├── erik_kvadrat.jpg  # Profile image
+│   ├── robots.txt    # SEO robots file for search engines
+│   ├── sitemap.xml   # SEO sitemap for search engines
 │   └── *.png/.svg   # Logos and other images
 ├── src/
 │   ├── assets/      # Project assets
@@ -109,7 +111,10 @@ The website is automatically deployed to fjelldata.com through a GitHub Actions 
 - **Interactive Map Integration**: Leaflet-based contact map with custom markers
 - **Project Showcase**: Portfolio with screenshots and technology tags
 - **Contact System**: Direct contact information with phone and email links
-- **SEO Optimization**: Meta tags management with route-specific content
+- **SEO Optimization**: 
+  - Meta tags management with route-specific content
+  - Properly configured robots.txt for search engine crawling
+  - XML sitemap for improved search engine indexing
 - **Advanced Animations and Interactions**:
   - Interactive hero section with hover effects and confetti
   - Typewriter effect for dynamic text display
