@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
+import NotFoundPage from './components/NotFoundPage';
 import Footer from './components/Footer';
 
 function App() {
@@ -52,6 +53,15 @@ function App() {
                   description="Webutvikling, IT-rådgivning og systemutvikling. Personlig, tilpasselig service til rimelig pris - 500kr/t for SMB."
                 />
                 <Services />
+              </>
+            } />
+            <Route path="*" element={
+              <>
+                <MetaTags 
+                  title="404 - Siden ikke funnet | Fjelldata"
+                  description="Beklager, siden du leter etter eksisterer ikke. Gå tilbake til Fjelldata for IT-rådgivning og webutvikling."
+                />
+                <NotFoundPage />
               </>
             } />
           </Routes>

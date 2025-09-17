@@ -63,7 +63,7 @@ const Portfolio: React.FC = () => {
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors"
                   >
-                    <span>Besøk nettside</span>
+                    <span>{project.url.includes('github.com') ? 'Besøk kildekode' : 'Besøk nettside'}</span>
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 </div>

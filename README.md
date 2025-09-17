@@ -10,13 +10,16 @@ This repository contains the source code for [fjelldata.com](https://fjelldata.c
 - **Styling**: 
   - Tailwind CSS for utility-first styling
   - Custom animations with CSS keyframes
-  - Responsive design patterns
+  - Responsive design patterns with custom container padding
 - **UI Components**: 
-  - Headless UI for accessible dialogs
+  - Headless UI for accessible dialogs and modals
   - Lucide React icons for consistent iconography
+  - React Confetti for interactive celebrations
   - Custom interactive components
-- **Routing**: React Router
-- **Maps**: Leaflet/React Leaflet
+- **Routing**: React Router DOM v7
+- **Maps**: Leaflet/React Leaflet for interactive contact maps
+- **Additional Libraries**:
+  - React Icons for extended icon support
 
 ## Development
 
@@ -51,6 +54,7 @@ The website is automatically deployed to fjelldata.com through a GitHub Actions 
 - **Deployment Path**: `/var/www/fjelldata/dist`
 - **SSH Access**: Port 444 with key authentication
 - **Build Strategy**: Static file hosting (no server-side build)
+- **Hardware**: Custom PC built from scratch using a Ryzen 5 3400G APU, 16GB DDR4 RAM, and a 1TB NVMe SSD
 
 ### Security
 
@@ -64,40 +68,64 @@ The website is automatically deployed to fjelldata.com through a GitHub Actions 
 ```
 ├── public/          # Static assets
 │   ├── screenshots/  # Project portfolio images
-│   └── *.jpg        # Profile and other images
+│   ├── erik_kvadrat.jpg  # Profile image
+│   └── *.png/.svg   # Logos and other images
 ├── src/
 │   ├── assets/      # Project assets
+│   │   └── react.svg # React logo
 │   ├── components/  # React components
-│   │   ├── Hero.tsx       # Hero section with animations
-│   │   ├── Features.tsx   # Features with dialogs
-│   │   ├── Portfolio.tsx  # Project showcase
-│   │   └── ...           # Other components
+│   │   ├── Hero.tsx       # Hero section with animations and confetti
+│   │   ├── Features.tsx   # Features with interactive dialogs
+│   │   ├── Portfolio.tsx  # Project showcase with hover effects
+│   │   ├── Services.tsx   # Services overview and background
+│   │   ├── Contact.tsx    # Contact information with interactive map
+│   │   ├── Header.tsx     # Navigation header
+│   │   ├── Footer.tsx     # Site footer
+│   │   ├── MetaTags.tsx   # SEO meta tags management
+│   │   ├── NotFoundPage.tsx # 404 error page for undefined routes
+│   │   └── ErrorBoundary.tsx # Error handling component
 │   ├── hooks/       # Custom React hooks
-│   │   └── useTypewriter.ts  # Typewriter animation
+│   │   └── useTypewriter.ts  # Typewriter animation effect
 │   ├── types/       # TypeScript definitions
-│   └── App.tsx      # Root component
+│   │   └── css.d.ts # CSS module type definitions
+│   ├── App.tsx      # Root component with routing
+│   ├── main.tsx     # Application entry point
+│   ├── index.css    # Global styles and Tailwind config
+│   └── App.css      # Component-specific styles
 ├── .vscode/         # Editor configuration
 ├── vite.config.ts   # Vite configuration
-└── tailwind.config.js
+├── tailwind.config.js # Tailwind CSS configuration
+├── tsconfig*.json   # TypeScript configurations
+└── eslint.config.js # ESLint configuration
 ```
 
 ## Portfolio Features
 
-- Responsive design optimized for all devices
-- Interactive map integration
-- Project showcase with screenshots
-- Contact form integration
-- SEO optimization with meta tags
-- Advanced animations and interactions:
-  - Interactive hero section with image transitions
+- **Responsive Design**: Optimized for all devices with custom container padding system
+- **Interactive Elements**: 
+  - Hero image with confetti animation on click
   - Smart hover effects (desktop only)
-  - Smooth image swap animations
   - Responsive click animations
-- Price comparison features:
-  - Real-time market rate comparisons
-  - Interactive pricing dialogs
-  - Transparent cost breakdowns
-- Expertise showcase:
-  - Scalable service offerings
+- **Interactive Map Integration**: Leaflet-based contact map with custom markers
+- **Project Showcase**: Portfolio with screenshots and technology tags
+- **Contact System**: Direct contact information with phone and email links
+- **SEO Optimization**: Meta tags management with route-specific content
+- **Advanced Animations and Interactions**:
+  - Interactive hero section with hover effects and confetti
+  - Typewriter effect for dynamic text display
+  - Feature dialogs with price comparisons and service details
+  - Hover effects and transitions on portfolio cards and navigation elements
+- **Price Comparison Features**:
+  - Market rate price comparisons in interactive dialogs
+  - Transparent cost breakdowns showing savings
+- **Service Showcase**:
+  - Scalable service offerings with detailed breakdowns
   - Personal consultation information
-  - Service level descriptions
+  - Professional background and credentials display
+- **Multi-page Navigation**: React Router implementation with:
+  - Home page with Hero and Features
+  - Dedicated Portfolio page
+  - Services page with background information
+  - Contact page with interactive map
+  - 404 Not Found page for undefined routes
+- **Error Handling**: Error boundary implementation for robust user experience
