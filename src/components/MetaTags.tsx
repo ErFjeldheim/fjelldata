@@ -8,8 +8,8 @@ interface MetaTagsProps {
 }
 
 const MetaTags: React.FC<MetaTagsProps> = ({ 
-  title = 'Fjelldata - IT-konsulent til 500kr/t',
-  description = 'Profesjonell IT-rådgivning til 500kr/t. Sammenlign og spar på førsteklasses IT-løsninger.',
+  title = 'Fjelldata - Personlig IT-konsulent 500kr/t',
+  description = 'Personlig IT-rådgivning til rimelig pris - kun 500kr/t. Tilpasselige og pålitelige IT-løsninger uten mellomledd for SMB.',
   image = '/logo.png'
 }) => {
   const location = useLocation();

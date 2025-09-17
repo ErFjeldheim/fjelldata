@@ -20,8 +20,8 @@ function App() {
             <Route path="/" element={
               <>
                 <MetaTags 
-                  title="Fjelldata - IT-konsulent til 500kr/t"
-                  description="Profesjonell IT-rådgivning og utviklingstjenester. Fast timepris på 500kr/t uten mellomledd."
+                  title="Fjelldata - Personlig IT-konsulent 500kr/t"
+                  description="Personlig IT-rådgivning til rimelig pris. Tilpasselige og pålitelige IT-løsninger uten mellomledd for små og mellomstore bedrifter."
                 />
                 <Hero />
                 <Features />
@@ -30,8 +30,8 @@ function App() {
             <Route path="/contact" element={
               <>
                 <MetaTags 
-                  title="Kontakt Fjelldata - IT-konsulent"
-                  description="Ta kontakt for en uforpliktende prat om dine IT-behov. Fast timepris på 500kr/t."
+                  title="Kontakt Fjelldata - Personlig IT-konsulent"
+                  description="Ta kontakt for personlig IT-rådgivning til rimelig pris - kun 500kr/t. Ingen mellomledd, direkte kommunikasjon."
                 />
                 <Contact />
               </>
@@ -39,8 +39,8 @@ function App() {
             <Route path="/portfolio" element={
               <>
                 <MetaTags 
-                  title="Fjelldata Portefølje - Tidligere Prosjekter"
-                  description="Se våre tidligere prosjekter og løsninger vi har levert til fornøyde kunder."
+                  title="Fjelldata Portefølje - Pålitelige IT-løsninger"
+                  description="Se våre tidligere prosjekter og tilpasselige IT-løsninger levert til fornøyde kunder. WordPress, React og systemutvikling."
                 />
                 <Portfolio />
               </>
@@ -48,8 +48,8 @@ function App() {
             <Route path="/services" element={
               <>
                 <MetaTags 
-                  title="Fjelldata Tjenester - IT-konsulent"
-                  description="Webutvikling, IT-rådgivning og systemutvikling til fast timepris på 500kr/t."
+                  title="Fjelldata Tjenester - Personlig IT-rådgivning"
+                  description="Webutvikling, IT-rådgivning og systemutvikling. Personlig, tilpasselig service til rimelig pris - 500kr/t for SMB."
                 />
                 <Services />
               </>

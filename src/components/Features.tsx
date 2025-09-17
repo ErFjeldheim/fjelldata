@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Wallet, BarChart2, Scale, User } from 'lucide-react';
+import { Wallet, Scaling, User, ChevronRight } from 'lucide-react';
 import { Dialog, Transition } from '@headlessui/react';
 import { useTypewriter } from '../hooks/useTypewriter';
 
 const Features: React.FC = () => {
-  const [dialogState, setDialogState] = useState<{ isOpen: boolean; type: 'prices' | 'comparison' | 'scalable' | 'personal' }>({
+  const [dialogState, setDialogState] = useState<{ isOpen: boolean; type: 'prices' | 'scalable' | 'personal' }>({
     isOpen: false,
     type: 'prices'
   });
@@ -24,47 +24,35 @@ const Features: React.FC = () => {
 
   const competitors = [
     {
-      name: 'Gjennomsnittlig IT-konsulent',
+      name: 'Junior IT-konsulent',
       hourlyRate: 1200,
-      comment: 'Basert på markedsundersøkelser'
+      comment: 'Typisk timepris for junior konsulenter'
     },
     {
-      name: 'Store konsulentselskaper',
+      name: 'Senior IT-konsulent',
       hourlyRate: 1500,
       comment: 'Typisk timepris for senior konsulenter'
     },
-    {
-      name: 'Freelance spesialister',
-      hourlyRate: 1000,
-      comment: 'Varierer basert på erfaring'
-    }
   ];
 
   const features = [
     {
       icon: Wallet,
-      title: 'Klare, faste timepriser',
+      title: 'Rimelig',
       description: 'Profesjonell IT-støtte til 500kr/t. Ingen ekstra kostnader.',
       color: 'text-primary-500',
       type: 'prices' as const
     },
     {
-      icon: Scale,
-      title: 'Sammenlign med bransjeledere',
-      description: 'Sammenlign våre priser direkte med toppfirmaer. Optimaliser utgiftene dine.',
-      color: 'text-green-500',
-      type: 'comparison' as const
-    },
-    {
-      icon: BarChart2,
-      title: 'Skalerbar ekspertise',
+      icon: Scaling,
+      title: 'Tilpasselig',
       description: 'Fleksibel støtte for alle prosjektstørrelser. Juster etter behov.',
       color: 'text-purple-500',
       type: 'scalable' as const
     },
     {
       icon: User,
-      title: 'Personlig, responsiv rådgivning',
+      title: 'Personlig',
       description: 'Arbeid direkte med meg. Rask og pålitelig service.',
       color: 'text-orange-500',
       type: 'personal' as const
@@ -86,12 +74,13 @@ const Features: React.FC = () => {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="feature-card text-center cursor-pointer hover:shadow-lg transition-shadow"
+                className="feature-card text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-shadow duration-300 ease-out relative group"
                 onClick={() => handleDialog(true, feature.type)}
+                style={{ transition: 'transform 300ms ease-out, box-shadow 300ms ease-out' }}
               >
                 <div className="mb-6">
                   <feature.icon className={`h-12 w-12 ${feature.color} mx-auto`} />
@@ -99,16 +88,20 @@ const Features: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   {feature.description}
                 </p>
+                <div className="flex items-center justify-center text-sm text-primary-500 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <span>Klikk for å se mer</span>
+                  <ChevronRight className="h-4 w-4 ml-1" />
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <Transition show={dialogState.isOpen && (dialogState.type === 'prices' || dialogState.type === 'comparison')} as={React.Fragment}>
+      <Transition show={dialogState.isOpen && dialogState.type === 'prices'} as={React.Fragment}>
         <Dialog
           as="div"
           className="fixed inset-0 z-50 overflow-y-auto"
@@ -148,27 +141,17 @@ const Features: React.FC = () => {
                   as="h3"
                   className="text-2xl font-bold leading-6 text-gray-900 mb-6"
                 >
-                  Prissammenligning
+                  Rimelig
                 </Dialog.Title>
 
                 <div className="mt-4 space-y-6">
-                  <div className={`p-4 rounded-lg border mb-6 ${
-                    dialogState.type === 'comparison' 
-                      ? 'bg-green-50 border-green-200' 
-                      : 'bg-primary-50 border-primary-200'
-                  }`}>
+                  <div className="p-4 rounded-lg border mb-6 bg-primary-50 border-primary-200">
                     <div className="flex justify-between items-center">
                       <div>
-                        <h4 className={`text-xl font-semibold ${
-                          dialogState.type === 'comparison' ? 'text-green-900' : 'text-primary-900'
-                        }`}>Fjelldata</h4>
-                        <p className={`text-sm mt-1 ${
-                          dialogState.type === 'comparison' ? 'text-green-700' : 'text-primary-700'
-                        }`}>Fast timepris uten overraskelser</p>
+                        <h4 className="text-xl font-semibold text-primary-900">Fjelldata</h4>
+                        <p className="text-sm mt-1 text-primary-700">Fast timepris uten overraskelser</p>
                       </div>
-                      <div className={`text-2xl font-bold ${
-                        dialogState.type === 'comparison' ? 'text-green-700' : 'text-primary-700'
-                      }`}>500 kr/t</div>
+                      <div className="text-2xl font-bold text-primary-700">500 kr/t</div>
                     </div>
                   </div>
 
@@ -184,13 +167,9 @@ const Features: React.FC = () => {
                     </div>
                   ))}
 
-                  <div className={`mt-8 p-4 rounded-lg ${
-                    dialogState.type === 'comparison' ? 'bg-blue-50' : 'bg-green-50'
-                  }`}>
-                    <h4 className={`text-lg font-semibold mb-2 ${
-                      dialogState.type === 'comparison' ? 'text-blue-800' : 'text-green-800'
-                    }`}>Din besparelse</h4>
-                    <p className={dialogState.type === 'comparison' ? 'text-blue-700' : 'text-green-700'}>
+                  <div className="mt-8 p-4 rounded-lg bg-green-50">
+                    <h4 className="text-lg font-semibold mb-2 text-green-800">Din besparelse</h4>
+                    <p className="text-green-700">
                       Ved å velge Fjelldata kan du spare mellom{' '}
                       <span className="font-bold">500-1000 kr per time</span>{' '}
                       sammenlignet med tradisjonelle konsulentselskaper.
@@ -201,11 +180,7 @@ const Features: React.FC = () => {
                 <div className="mt-6 text-right">
                   <button
                     type="button"
-                    className={`inline-flex justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                      dialogState.type === 'prices' 
-                        ? 'bg-primary-600 hover:bg-primary-700 focus-visible:ring-primary-500'
-                        : 'bg-green-600 hover:bg-green-700 focus-visible:ring-green-500'
-                    }`}
+                    className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 bg-primary-600 hover:bg-primary-700 focus-visible:ring-primary-500"
                     onClick={() => setDialogState({ isOpen: false, type: dialogState.type })}
                   >
                     Lukk
@@ -249,7 +224,7 @@ const Features: React.FC = () => {
             >
               <div className="inline-block w-full max-w-2xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
                 <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-gray-900 mb-6">
-                  Skalerbar IT-ekspertise
+                  Tilpasselig
                 </Dialog.Title>
 
                 <div className="mt-4 space-y-6">
@@ -336,7 +311,7 @@ const Features: React.FC = () => {
             >
               <div className="inline-block w-full max-w-2xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
                 <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-gray-900 mb-6">
-                  Personlig rådgivning
+                  Personlig
                 </Dialog.Title>
 
                 <div className="mt-4 space-y-6">

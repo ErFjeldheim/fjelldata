@@ -1,30 +1,25 @@
-import React, { useState } from 'react';
-import { Clock, Users, Heart } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Clock, Heart, Coins } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Confetti from 'react-confetti';
 
 const Hero: React.FC = () => {
-  const [currentImage, setCurrentImage] = useState('/erik_kvadrat.jpg');
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [confettiDimensions, setConfettiDimensions] = useState({ width: 500, height: 500 });
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const handleImageClick = () => {
-    if (isAnimating) return;
+    // Få faktiske dimensjoner av bildet
+    if (imageRef.current) {
+      const rect = imageRef.current.getBoundingClientRect();
+      setConfettiDimensions({ width: rect.width, height: rect.height });
+    }
     
-    setIsAnimating(true);
-    const img = document.querySelector('.hero-image');
-    img?.classList.add('clicked');
-    
-    // Bytt bilde når det er ute av syne (etter 40% av animasjonen)
+    setShowConfetti(true);
+    // Skjul konfetti etter 8 sekunder
     setTimeout(() => {
-      setCurrentImage(current => 
-        current === '/erik_kvadrat.jpg' ? '/erik_kvadrat_2.jpg' : '/erik_kvadrat.jpg'
-      );
-    }, 600); // 40% av 1.5s = 600ms
-
-    // Reset animasjon og state
-    setTimeout(() => {
-      img?.classList.remove('clicked');
-      setIsAnimating(false);
-    }, 1500);
+      setShowConfetti(false);
+    }, 8000);
   };
 
   return (
@@ -39,7 +34,7 @@ const Hero: React.FC = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Seniorrådgivning til uslåelige priser. Spar på førsteklasses IT-løsninger.
+              Personlig IT-rådgivning til en rimelig pris. Spar på pålitelige IT-løsninger.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -48,7 +43,7 @@ const Hero: React.FC = () => {
                 <span className="text-gray-300">Fast 500kr/t sats</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Users className="h-5 w-5 text-primary-500" />
+                <Coins className="h-5 w-5 text-primary-500" />
                 <span className="text-gray-300">Markedspris: 1000-2000kr/t</span>
               </div>
               <div className="flex items-center space-x-3">
@@ -67,16 +62,27 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="relative aspect-square group cursor-pointer overflow-hidden" onClick={handleImageClick}>
-            <div className="absolute inset-0 bg-primary-500 rounded-lg opacity-0 transition-opacity duration-300 md:group-hover:opacity-10"></div>
+          <div ref={imageRef} className="relative aspect-square group cursor-pointer overflow-hidden rounded-lg" onClick={handleImageClick}>
+            <div className="absolute inset-0 bg-primary-500 rounded-lg opacity-0 transition-opacity duration-300 md:group-hover:opacity-10 pointer-events-none"></div>
             <img 
-              src={currentImage}
-              alt="IT-ekspert Erik Fjeldheim fra Fjelldata"
+              src="/erik_kvadrat.jpg"
+              alt="IT-ekspert Erik Hjelm Fjeldheim fra Fjelldata"
               loading="lazy"
               width={500}
               height={500}
               className="hero-image w-full h-full rounded-lg object-cover transform transition-transform duration-300 shadow-xl md:group-hover:scale-[1.02]"
             />
+            {showConfetti && (
+              <div className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
+                <Confetti
+                  width={confettiDimensions.width}
+                  height={confettiDimensions.height}
+                  recycle={false}
+                  numberOfPieces={1000}
+                  gravity={0.3}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
