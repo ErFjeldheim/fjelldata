@@ -1,7 +1,7 @@
 # Fjelldata Portfolio Website
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Ffjelldata.com&label=fjelldata.com&style=flat-square)](https://fjelldata.com)
-[![Hosted by Dokploy](https://img.shields.io/badge/Hosted_by-Dokploy-blue?style=flat-square&logo=docker&logoColor=white)](https://dokploy.com/)
+[![Hosted on Dokploy](https://img.shields.io/badge/Hosted_on-Dokploy-blue?style=flat-square&logo=docker&logoColor=white)](https://dokploy.com/)
 [![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
