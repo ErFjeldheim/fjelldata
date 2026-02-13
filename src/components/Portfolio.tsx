@@ -10,16 +10,24 @@ const Portfolio: React.FC = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Responsivt Design']
     },
     {
+      title: 'Haugalandsved',
+      description: 'Nettbutikk for salg av ved på Haugalandet. Utviklet med SvelteKit for lynrask ytelse.',
+      url: 'https://haugalandsved.no',
+      repoUrl: 'https://github.com/ErFjeldheim/haugalandsved',
+      technologies: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'PocketBase', 'Stripe']
+    },
+    {
+      title: 'Matland Gard',
+      description: 'Ny og modernisert nettside for Matland Gard. Bygget med moderne teknologi.',
+      url: 'https://new.matlandgard.no/',
+      repoUrl: 'https://github.com/ErFjeldheim/matland-gard',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Stripe']
+    },
+    {
       title: 'Skjold Arena',
       description: 'Moderne nettside for Skjold Arena - bygdehuset i Skjold. Utviklet med WordPress i en LAMP stack',
       url: 'https://skjoldarena.no/',
       technologies: ['WordPress', 'Tilpasset Design', 'LAMP Stack', 'Responsivt Design']
-    },
-    {
-      title: 'Tante Ulrika',
-      description: 'Skreddersydd presentasjonsside for Tante Ulrika. Bygget med WordPress og Elementor',
-      url: 'https://tanteulrika.no/',
-      technologies: ['WordPress', 'Elementor', 'Tilpasset Theme']
     },
     {
       title: 'Lensmannsgarden Isvik',
@@ -28,10 +36,17 @@ const Portfolio: React.FC = () => {
       technologies: ['WordPress', 'Online Booking', 'Responsivt Design', 'SEO']
     },
     {
-      title: 'Matland Gard',
-      description: 'Moderne bookingside for Matland Gard. Utviklet i WordPress og Elementor',
-      url: 'https://matlandgard.no/',
-      technologies: ['WordPress', 'Tilpasset Theme', 'Responsivt Design', 'SEO']
+      title: 'Tante Ulrika',
+      description: 'Skreddersydd presentasjonsside for Tante Ulrika. Bygget med WordPress og Elementor',
+      url: 'https://tanteulrika.no/',
+      technologies: ['WordPress', 'Elementor', 'Tilpasset Theme']
+    },
+    {
+      title: 'PangoHub',
+      description: 'Intern administrasjonsplattform for Pango. Dashboard og verktøy for daglig drift.',
+      url: 'https://pangohub.fjelldata.com/',
+      repoUrl: 'https://github.com/ErFjeldheim/PangoHub',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PocketBase', 'Radix UI']
     },
     {
       title: 'Skjold Singel & Stein',
@@ -56,7 +71,7 @@ const Portfolio: React.FC = () => {
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                   <a
                     href={project.url}
                     target="_blank"
@@ -66,6 +81,19 @@ const Portfolio: React.FC = () => {
                     <span>{project.url.includes('github.com') ? 'Besøk kildekode' : 'Besøk nettside'}</span>
                     <ExternalLink className="h-4 w-4" />
                   </a>
+                  {/* @ts-ignore - repoUrl exists on some projects */}
+                  {project.repoUrl && (
+                    <a
+                      // @ts-ignore
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                    >
+                      <span>Kildekode</span>
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </div>
               <div className="p-6">
