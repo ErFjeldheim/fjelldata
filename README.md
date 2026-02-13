@@ -1,5 +1,9 @@
 # Fjelldata Portfolio Website
 
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Ffjelldata.com&label=fjelldata.com&style=flat-square)](https://fjelldata.com)
+[![Hosted by Dokploy](https://img.shields.io/badge/Hosted_by-Dokploy-blue?style=flat-square&logo=docker&logoColor=white)](https://dokploy.com/)
+[![Self Hosted](https://img.shields.io/badge/Server-Self--Hosted-orange?style=flat-square&logo=linux&logoColor=white)]()
+
 This repository contains the source code for [fjelldata.com](https://fjelldata.com), a portfolio website built with React, TypeScript, and Vite.
 
 ## Tech Stack
