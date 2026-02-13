@@ -73,7 +73,8 @@ const Hero: React.FC = () => {
             <img 
               src="/erik_kvadrat.jpg"
               alt="IT-ekspert Erik Hjelm Fjeldheim fra Fjelldata"
-              loading="lazy"
+              loading="eager"
+              fetchPriority="high"
               width={500}
               height={500}
               className="hero-image w-full h-full rounded-lg object-cover transform transition-transform duration-300 shadow-xl md:group-hover:scale-[1.02]"
