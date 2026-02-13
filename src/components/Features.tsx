@@ -80,6 +80,9 @@ const Features: React.FC = () => {
                 key={index} 
                 className="feature-card text-center cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-shadow duration-300 ease-out relative group"
                 onClick={() => handleDialog(true, feature.type)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleDialog(true, feature.type) }}
+                role="button"
+                tabIndex={0}
                 style={{ transition: 'transform 300ms ease-out, box-shadow 300ms ease-out' }}
               >
                 <div className="mb-6">
