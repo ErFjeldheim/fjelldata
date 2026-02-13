@@ -8,8 +8,8 @@ const Portfolio: React.FC = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl lg:text-5xl font-bold mb-12 text-center">Portefølje</h1>
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+          {projects.map((project) => (
+            <div key={project.title} className="bg-gray-900 rounded-lg overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
               <div className="aspect-video w-full relative">
                 <img
                   src={project.url.includes('github.com') 

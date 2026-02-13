@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import { Clock, Heart, Coins } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Confetti from 'react-confetti';
+
+const Confetti = React.lazy(() => import('react-confetti'));
 
 const Hero: React.FC = () => {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -81,13 +82,15 @@ const Hero: React.FC = () => {
             />
             {showConfetti && (
               <div className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
-                <Confetti
-                  width={confettiDimensions.width}
-                  height={confettiDimensions.height}
-                  recycle={false}
-                  numberOfPieces={1000}
-                  gravity={0.3}
-                />
+                <Suspense fallback={null}>
+                  <Confetti
+                    width={confettiDimensions.width}
+                    height={confettiDimensions.height}
+                    recycle={false}
+                    numberOfPieces={1000}
+                    gravity={0.3}
+                  />
+                </Suspense>
               </div>
             )}
           </button>
