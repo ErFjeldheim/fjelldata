@@ -2,7 +2,10 @@
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Ffjelldata.com&label=fjelldata.com&style=flat-square)](https://fjelldata.com)
 [![Hosted by Dokploy](https://img.shields.io/badge/Hosted_by-Dokploy-blue?style=flat-square&logo=docker&logoColor=white)](https://dokploy.com/)
-[![Self Hosted](https://img.shields.io/badge/Server-Self--Hosted-orange?style=flat-square&logo=linux&logoColor=white)]()
+[![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 This repository contains the source code for [fjelldata.com](https://fjelldata.com), a portfolio website built with React, TypeScript, and Vite.
 
