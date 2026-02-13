@@ -6,7 +6,7 @@ import Confetti from 'react-confetti';
 const Hero: React.FC = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiDimensions, setConfettiDimensions] = useState({ width: 500, height: 500 });
-  const imageRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLButtonElement>(null);
 
   const handleImageClick = () => {
     // Få faktiske dimensjoner av bildet
@@ -62,7 +62,13 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div ref={imageRef} className="relative aspect-square group cursor-pointer overflow-hidden rounded-lg" onClick={handleImageClick}>
+          <button 
+            type="button"
+            ref={imageRef} 
+            className="relative aspect-square group cursor-pointer overflow-hidden rounded-lg appearance-none bg-transparent border-none p-0 text-left" 
+            onClick={handleImageClick}
+            aria-label="Vis konfetti effekt"
+          >
             <div className="absolute inset-0 bg-primary-500 rounded-lg opacity-0 transition-opacity duration-300 md:group-hover:opacity-10 pointer-events-none"></div>
             <img 
               src="/erik_kvadrat.jpg"
@@ -83,7 +89,7 @@ const Hero: React.FC = () => {
                 />
               </div>
             )}
-          </div>
+          </button>
         </div>
       </div>
     </section>

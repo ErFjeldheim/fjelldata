@@ -12,8 +12,8 @@ declare module '*.module.css' {
 // Dette forteller VS Code at Tailwind direktiver er gyldige
 declare namespace CSS {
   interface AtRule {
-    tailwind: any;
-    apply: any;
-    layer: any;
+    tailwind: string;
+    apply: string;
+    layer: string;
   }
 }
