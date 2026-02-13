@@ -36,6 +36,7 @@ class ErrorBoundary extends Component<Props, State> {
               Vi jobber med å løse problemet. Vennligst prøv igjen senere eller kontakt oss hvis problemet vedvarer.
             </p>
             <button
+              type="button"
               className="btn-primary"
               onClick={() => window.location.reload()}
             >

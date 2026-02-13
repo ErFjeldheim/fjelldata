@@ -23,6 +23,7 @@ const NotFoundPage: React.FC = () => {
             </Link>
             
             <button 
+              type="button"
               onClick={() => window.history.back()} 
               className="btn-secondary flex items-center space-x-2"
             >
