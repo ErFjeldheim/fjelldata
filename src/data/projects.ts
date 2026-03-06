@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     title: 'Matland Gard',
     description: 'Ny og modernisert nettside for Matland Gard. Bygget med moderne teknologi.',
-    url: 'https://new.matlandgard.no/',
+    url: 'https://matlandgard.no/',
     repoUrl: 'https://github.com/ErFjeldheim/matland-gard',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Stripe']
   },
