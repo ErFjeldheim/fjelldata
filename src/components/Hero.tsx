@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
           >
             <div className="absolute inset-0 bg-primary-500 rounded-lg opacity-0 transition-opacity duration-300 md:group-hover:opacity-10 pointer-events-none"></div>
             <img 
-              src="/erik_kvadrat.jpg"
+              src="/erik_kvadrat.webp"
               alt="IT-ekspert Erik Hjelm Fjeldheim fra Fjelldata"
               loading="eager"
               fetchPriority="high"

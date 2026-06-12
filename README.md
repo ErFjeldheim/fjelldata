@@ -75,7 +75,7 @@ The website is automatically deployed to fjelldata.com through a GitHub Actions 
 ```
 ├── public/          # Static assets
 │   ├── screenshots/  # Project portfolio images
-│   ├── erik_kvadrat.jpg  # Profile image
+│   ├── erik_kvadrat.webp # Profile image
 │   ├── robots.txt    # SEO robots file for search engines
 │   ├── sitemap.xml   # SEO sitemap for search engines
 │   └── *.png/.svg   # Logos and other images
