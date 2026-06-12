@@ -47,7 +47,7 @@ const Services: React.FC = () => {
             <div className="flex items-start space-x-4">
               <Clock className="w-6 h-6 text-primary-500 mt-1" />
               <div>
-                <h3 className="font-semibold mb-2">6 års erfaring</h3>
+                <h3 className="font-semibold mb-2">7 års erfaring</h3>
                 <p className="text-gray-300">Selvstendig IT-konsulent siden 2019</p>
               </div>
             </div>
