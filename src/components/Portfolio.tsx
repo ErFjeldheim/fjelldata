@@ -18,7 +18,7 @@ const Portfolio: React.FC = () => {
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                   <a
                     href={project.url}
                     target="_blank"
@@ -48,7 +48,7 @@ const Portfolio: React.FC = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-primary-500 bg-opacity-20 text-primary-500 px-3 py-1 rounded-full text-sm"
+                      className="bg-primary-500/20 text-primary-500 px-3 py-1 rounded-full text-sm"
                     >
                       {tech}
                     </span>

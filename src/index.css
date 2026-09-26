@@ -1,7 +1,17 @@
-/* @tailwind is used by Tailwind CSS */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-200: #bfdbfe;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+}
 
 @layer base {
   body {
@@ -13,7 +23,7 @@
   .btn-primary {
     @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
   }
-  
+
   .btn-secondary {
     @apply bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
   }
@@ -50,7 +60,7 @@
     animation: slide-out-in 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
   }
-  
+
   @keyframes slide-out-in {
     0% {
       transform: translateX(0) rotate(0);
@@ -81,7 +91,7 @@
       opacity: 1;
     }
   }
-  
+
   .feature-card {
     @apply bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-200;
   }

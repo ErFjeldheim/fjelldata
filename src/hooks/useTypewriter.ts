@@ -12,9 +12,10 @@ export const useTypewriter = (words: string[], typingSpeed = 150, deletingSpeed 
     
     if (isDeleting) {
       if (displayText === '') {
-        setIsDeleting(false);
-        setCurrentWordIndex((prev) => (prev + 1) % words.length);
-        timeout = setTimeout(() => {}, pauseTime / 2);
+        timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        }, pauseTime / 2);
       } else {
         timeout = setTimeout(() => {
           setDisplayText(displayText.slice(0, -1));

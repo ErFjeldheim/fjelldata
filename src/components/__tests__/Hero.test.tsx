@@ -21,7 +21,7 @@ describe('Hero Component', () => {
     expect(screen.getByText(/Personlig IT-rådgivning til en rimelig pris/i)).toBeInTheDocument();
   });
 
-  it('clicking the image button triggers confetti', () => {
+  it('clicking the image button triggers confetti', async () => {
     render(
       <MemoryRouter>
         <Hero />
@@ -33,6 +33,6 @@ describe('Hero Component', () => {
     const confettiButton = screen.getByLabelText(/Vis konfetti effekt/i);
     fireEvent.click(confettiButton);
 
-    expect(screen.getByTestId('confetti')).toBeInTheDocument();
+    expect(await screen.findByTestId('confetti')).toBeInTheDocument();
   });
 });

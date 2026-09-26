@@ -120,7 +120,7 @@ const Features: React.FC = () => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-black bg-opacity-30" />
+              <div className="fixed inset-0 bg-black/30" />
             </Transition.Child>
 
             <span
@@ -211,7 +211,7 @@ const Features: React.FC = () => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-black bg-opacity-30" />
+              <div className="fixed inset-0 bg-black/30" />
             </Transition.Child>
 
             <span className="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
@@ -298,7 +298,7 @@ const Features: React.FC = () => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-black bg-opacity-30" />
+              <div className="fixed inset-0 bg-black/30" />
             </Transition.Child>
 
             <span className="inline-block h-screen align-middle" aria-hidden="true">&#8203;</span>
